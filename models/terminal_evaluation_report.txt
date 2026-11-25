@@ -1,0 +1,18 @@
+Accuracy: 0.9923  (651 images)
+  recall def_front: 0.9912
+  recall ok_front: 0.9949
+Confusion matrix (rows = truth): ['def_front', 'ok_front'] 
+ [[449   4]
+ [  1 197]]
+Decisions at this threshold: {'FAIL': 446, 'PASS': 200, 'REVIEW': 5}
+Inference time: mean 171.1 ms, p95 190.1 ms (this machine)
+
+Misclassified (first 10):
+  cast_def_0_150.jpeg: truth=def_front predicted=ok_front conf=0.997
+  cast_def_0_1591.jpeg: truth=def_front predicted=ok_front conf=0.905
+  cast_def_0_2102.jpeg: truth=def_front predicted=ok_front conf=0.945
+  cast_def_0_666.jpeg: truth=def_front predicted=ok_front conf=0.605
+  cast_ok_0_9926.jpeg: truth=ok_front predicted=def_front conf=0.599
+
+Training report accuracy: 0.9923 on 651 images | app accuracy: 0.9923 | gap 0.0000
+RESULT: MATCH - the app reproduces the training evaluation.

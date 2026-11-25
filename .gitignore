@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Runtime data (databases, stored geometry) -- never commit
+data/*
+!data/.gitkeep
+!data/geometry/.gitkeep
+*.db
+*.sqlite3
+
+# Trained models are large; commit labels/evaluation reports only if desired
+models/*.keras
+models/*.h5
+# NOTE: models/ood.npz is small and belongs to the model bundle; deploy it together with the model (see docs/DEPLOYMENT.md)
+models/*/saved_model.pb
+models/*/variables/
+models/odd.npz
+
+# Generated test scans / datasets
+test_scans/
+dataset/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.local
+frontend/.env
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Deployment secrets
+deploy.env
+
+# Local build/experiment artifacts (not source; some exceed GitHub's 100 MB limit)
+*.log
+*.jsonl
+*.zip
+.venv.broken-python312/
+dataset_synth/
+dataset_synth_big/
+tf_wheel_url.txt
+

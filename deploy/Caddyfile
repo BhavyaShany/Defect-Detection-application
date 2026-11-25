@@ -1,0 +1,15 @@
+# SITE_ADDRESS comes from deploy.env:
+#   - a hostname (e.g. 203-0-113-10.sslip.io or your domain)  -> Caddy gets an HTTPS certificate automatically
+#   - ":80"                                                   -> plain HTTP (local testing only)
+{$SITE_ADDRESS} {
+	encode gzip
+
+	# Shared demo password. Replace the hash (see docs/DEPLOYMENT.md, step "Set the demo password").
+	# The app itself has no user accounts yet, so do NOT expose it without this.
+	basic_auth {
+		demo REPLACE_WITH_BCRYPT_HASH
+	}
+
+	# Dashboard, REST API and WebSocket all go to the app (WebSockets are proxied automatically).
+	reverse_proxy app:8000
+}

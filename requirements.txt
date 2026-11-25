@@ -1,0 +1,18 @@
+# Core API
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9      # required by FastAPI for file uploads
+sqlalchemy>=2.0,<2.1
+
+# Scan processing (always required)
+numpy>=1.26
+scipy>=1.11
+opencv-python-headless>=4.9
+Pillow>=10.0
+
+# PostgreSQL driver (only if DATABASE_URL points at PostgreSQL)
+# psycopg2-binary>=2.9
+
+# Optional accelerators / ML runtime -- install separately, see README:
+#   pip install open3d        (faster outlier removal + ICP; Python 3.8-3.12 wheels)
+#   pip install tensorflow    (required to run the trained EfficientNet model)

@@ -1,0 +1,7 @@
+{
+  "class_names": ["defective", "ok"],
+  "pass_classes": ["ok"],
+  "input_mode": "depth",
+  "img_size": 224,
+  "model_name": "EfficientNetB0-casting-v1"
+}

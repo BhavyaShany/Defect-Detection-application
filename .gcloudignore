@@ -1,0 +1,30 @@
+# Files sent to Cloud Build by `gcloud run deploy --source .`
+# Keep this small: the trained model (models/) MUST stay included, everything local-only must not.
+.gcloudignore
+.git
+.gitignore
+.dockerignore
+.venv
+.venv.broken-python312
+**/__pycache__
+**/*.py[cod]
+frontend/node_modules
+frontend/dist
+frontend/.vite
+data
+dataset
+dataset_synth
+dataset_synth_big
+test_scans
+tests
+docs
+tools
+ml
+*.log
+*.zip
+*.jsonl
+tf_wheel_url.txt
+deploy.env
+.env
+.env.local
+.vscode

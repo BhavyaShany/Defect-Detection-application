@@ -1,0 +1,12 @@
+{
+  "class_names": [
+    "def_front",
+    "ok_front"
+  ],
+  "pass_classes": [
+    "ok_front"
+  ],
+  "input_mode": "image",
+  "img_size": 224,
+  "model_name": "casting-photo-v1"
+}

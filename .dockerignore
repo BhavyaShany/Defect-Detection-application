@@ -1,0 +1,19 @@
+.git
+.venv
+**/__pycache__
+**/node_modules
+frontend/dist
+data
+dataset
+test_scans
+tests
+docs
+tools
+ml
+deploy.env
+.env
+# The trained model is baked into the image (COPY models ./models) so hosts without persistent volumes
+# work out of the box. docker-compose still mounts ./models over it (read-only) when running the stack.
+# models/*.keras stays git-ignored: upload the model files to the host/repo separately.
+models/dataset
+models/scans
